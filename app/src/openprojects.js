@@ -29,6 +29,10 @@
                     templateUrl: 'src/add/addForm.html',
                     controller: 'AddCtrl'
                 }).
+                when('/login', {
+                    templateUrl: 'src/account/login.html',
+                    controller: 'LoginCtrl'
+                }).
                 when('/project/:id', {
                     templateUrl: 'src/project/project.html',
                     controller: 'ProjectCtrl'
