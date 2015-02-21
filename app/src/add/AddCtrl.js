@@ -16,8 +16,19 @@
 (function(app) {
     'use strict';
 
-    var AddCtrl = function($scope) {
+    var AddCtrl = function($scope, $location) {
         //$scope.status = ["Inceput", "Dezvoltare", "Beta", "Productie"];
+        $scope.cancel = function() {
+            goHome();
+        };
+
+        $scope.save=function() {
+            console.log($scope.project);
+        };
+
+        var goHome = function() {
+            $location.path("#/");
+        };
     };
 
     app.controller("AddCtrl", AddCtrl);

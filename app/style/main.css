@@ -6,11 +6,16 @@ html, body {
     text-align: center;
 }
 .container {
-    padding: 20px;
+    padding: 5px;
     max-width: 920px;
     margin: auto;
 }
 
+.addButton {
+    margin: 5px;
+    padding: 5px;
+}
+/*------------------user page---------------*/
 .project-cover {
     width: 100%;
     height: 200px;
@@ -20,4 +25,16 @@ html, body {
     background-size: cover;
     background-color: #fff;
     margin-top: -10px;
+}
+
+.userCard {
+    margin: 20px;
+    width: 200px;
+    display: inline-block;
+    padding: 10px;
+    font-size: 13px;
+}
+
+.userIcon {
+    width: 150px;
 }

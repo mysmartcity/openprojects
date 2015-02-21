@@ -17,40 +17,144 @@
     'use strict';
 
     var _projects = [{
-            id: 0,
-            name: "Testing application",
-            description: "City description alerts bla",
-            repository: "https://github.com/test/alerts",
-            image: "style/images/piata-mea-logo-1.png"
+        id: 0,
+        name: "Testing application",
+        description: "City description alerts bla",
+        repository: "https://github.com/test/alerts",
+        license: "Apache2",
+        demo: "http://demoapp.com",
+        status: "Inceput",
+        author: {
+            firstName: "Dan",
+            lastName: "Popescu"
+        },
+        image: "style/images/piata-mea-logo-1.png",
+        team: [{
+                firstName: "Ion",
+                lastName: "Dacian",
+                email: "ion.dacian@test.com",
+                link: "http://www.google.com",
+                role: "Programator"
+            },{
+                firstName: "Alex",
+                lastName: "Ionescu",
+                email: "alex.ionescu@test.com",
+                link: "http://www.google.com",
+                role: "Designer"
+            },{
+                firstName: "Marius",
+                lastName: "Stelian",
+                email: "marius.stelian@test.com",
+                link: "http://www.google.com",
+                role: "Tester"
+            }
+        ]
+    },{
+        id: 1,
+        name: "City Alerts",
+        description: "City description alerts bla",
+        repository: "https://github.com/test/alerts",
+        license: "Apache2",
+        demo: "http://demoapp.com",
+        status: "Inceput",
+        author: {
+            firstName: "Dan",
+            lastName: "Popescu"
+        },
+        image: "style/images/piata-mea-logo-1.png",
+        team: [{
+            firstName: "Ion",
+            lastName: "Dacian",
+            email: "ion.dacian@test.com",
+            link: "http://www.google.com",
+            role: "Programator"
         },{
-            id: 1,
-            name: "City Alerts",
-            description: "City description alerts bla",
-            repository: "https://github.com/test/alerts",
-            license: "Apache2",
-            demo: "http://demoapp.com",
-            status: "Inceput",
-            author: "Dan Popescu",
-            image: "style/images/piata-mea-logo-1.png"
+            firstName: "Alex",
+            lastName: "Ionescu",
+            email: "alex.ionescu@test.com",
+            link: "http://www.google.com",
+            role: "Designer"
         },{
-            id: 2,
-            name: "Piata Mea Alerts",
-            description: "City description alerts bla",
-            repository: "https://github.com/test/alerts",
-            image: "style/images/piata-mea-logo-1.png"
-        },{
-            id: 3,
-            name: "Fix my street",
-            description: "City description alerts bla",
-            repository: "https://github.com/test/alerts",
-            image: "style/images/piata-mea-logo-1.png"
+            firstName: "Marius",
+            lastName: "Stelian",
+            email: "marius.stelian@test.com",
+            link: "http://www.google.com",
+            role: "Tester"
         }
+        ]
+    },{
+        id: 2,
+        name: "Piata Mea Alerts",
+        description: "City description alerts bla",
+        repository: "https://github.com/test/alerts",
+        license: "Apache2",
+        demo: "http://demoapp.com",
+        status: "Inceput",
+        author: {
+            firstName: "Dan",
+            lastName: "Popescu"
+        },
+        image: "style/images/piata-mea-logo-1.png",
+        team: [{
+            firstName: "Ion",
+            lastName: "Dacian",
+            email: "ion.dacian@test.com",
+            link: "http://www.google.com",
+            role: "Programator"
+        },{
+            firstName: "Alex",
+            lastName: "Ionescu",
+            email: "alex.ionescu@test.com",
+            link: "http://www.google.com",
+            role: "Designer"
+        },{
+            firstName: "Marius",
+            lastName: "Stelian",
+            email: "marius.stelian@test.com",
+            link: "http://www.google.com",
+            role: "Tester"
+        }
+        ]
+    },{
+        id: 3,
+        name: "Fix my street",
+        description: "City description alerts bla",
+        repository: "https://github.com/test/alerts",
+        license: "Apache2",
+        demo: "http://demoapp.com",
+        status: "Inceput",
+        author: {
+            firstName: "Dan",
+            lastName: "Popescu"
+        },
+        image: "style/images/piata-mea-logo-1.png",
+        team: [{
+            firstName: "Ion",
+            lastName: "Dacian",
+            email: "ion.dacian@test.com",
+            link: "http://www.google.com",
+            role: "Programator"
+        },{
+            firstName: "Alex",
+            lastName: "Ionescu",
+            email: "alex.ionescu@test.com",
+            link: "http://www.google.com",
+            role: "Designer"
+        },{
+            firstName: "Marius",
+            lastName: "Stelian",
+            email: "marius.stelian@test.com",
+            link: "http://www.google.com",
+            role: "Tester"
+        }
+        ]
+    }
     ];
 
     var ProjectsService = function() {
         return {
             getList: function() {
-               return _projects;
+                return _projects;
             },
             get: function(id) {
                 return _projects[id];
