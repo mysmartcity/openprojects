@@ -12,20 +12,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 (function(app) {
     'use strict';
 
-    var ListCtrl = function($scope, $location, ProjectsService) {
-        $scope.projects = ProjectsService.getList();
-
-        $scope.add = function() {
-            $location.path("/add");
-        }
+    var ProjectCtrl = function($scope, $routeParams, ProjectsService) {
+        var idProject = $routeParams.id;
+        $scope.project = ProjectsService.get(idProject);
     };
 
-    ListCtrl.$inject = ["$scope", "$location", "ProjectsService"];
-
-    app.controller("ListCtrl", ListCtrl);
+    app.controller("ProjectCtrl", ProjectCtrl);
 
 } (angular.module("openprojects")));

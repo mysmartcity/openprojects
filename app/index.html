@@ -5,32 +5,41 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
 
     <title>Open Projects</title>
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css"/>
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css"/>
+    <link rel="stylesheet" href="style/main.css"/>
 
 </head>
 <body ng-app="openprojects">
 
-<md-toolbar>
+<md-toolbar md-scrool-shrink="true">
     <h2 class="md-toolbar-tools">
-        <span>Proiecte</span>
+        <a href="#/"><span class="fa fa-book"></span> <span>Proiecte</span></a>
+        <span flex></span>
+        <md-button>
+            <span class="fa fa-login"></span> Login
+        </md-button>
     </h2>
 </md-toolbar>
 
+<div class="main">
+    <div ng-view></div>
+</div>
 
-<md-content ng-view>
-
-</md-content>
 
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/angular/angular.min.js"></script>
 <script src="bower_components/angular-animate/angular-animate.js"></script>
 <script src="bower_components/angular-aria/angular-aria.js"></script>
 <script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-messages/angular-messages.js"></script>
 <script src="bower_components/angular-material/angular-material.js"></script>
 
 <script src="src/openprojects.js"></script>
 <script src="src/list/ListCtrl.js"></script>
 <script src="src/add/AddCtrl.js"></script>
+<script src="src/project/ProjectCtrl.js"></script>
+<script src="src/services/ProjectsService.js"></script>
 
 </body>
 </html>

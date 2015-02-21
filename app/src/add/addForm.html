@@ -1,1 +1,45 @@
-<p>addForm</p>
+<div layout="column" class="container">
+    <md-content class="md-padding" style="font-size:0.8em; text-align: left">
+        <h2>Completati formularul</h2>
+        <form name="userForm">
+            <div layout layout-sm="column">
+                <md-input-container style="width:80%">
+                    <label>Nume Proiect</label>
+                    <input ng-model="project.name">
+                </md-input-container>
+                <md-input-container flex>
+                    <label>Data Propunerii</label>
+                    <input ng-model="user.submissionDate">
+                </md-input-container>
+            </div>
+            <div layout layout-sm="column">
+                <md-input-container flex>
+                    <label>Nume Autor</label>
+                    <input ng-model="project.author.lastName">
+                </md-input-container>
+                <md-input-container flex>
+                    <label>Prenume Autor</label>
+                    <input ng-model="project.author.firstName">
+                </md-input-container>
+            </div>
+            <md-input-container flex>
+                <label>Descriere</label>
+                <textarea ng-model="project.description" columns="1" md-maxlength="150"></textarea>
+            </md-input-container><div layout layout-sm="column">
+                <md-input-container flex>
+                    <label>Numele evenimentului</label>
+                    <input ng-model="project.eventName">
+                </md-input-container>
+                <md-input-container flex>
+                    <label>Licenta</label>
+                    <input ng-model="project.license">
+                </md-input-container>
+                <md-input-container flex>
+                    <label>Status</label>
+                    <input ng-model="project.status" placeholder="Propus / In dezvoltare / Beta / Productie">
+                </md-input-container>
+            </div>
+
+        </form>
+    </md-content>
+</div>

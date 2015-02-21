@@ -16,7 +16,7 @@
 (function() {
     'use strict';
 
-    var openprojects = angular.module("openprojects", ['ngMaterial', 'ngRoute']);
+    var openprojects = angular.module("openprojects", ['ngMaterial', 'ngRoute', 'ngMessages']);
 
     openprojects.config(['$routeProvider',
         function($routeProvider) {
@@ -29,8 +29,13 @@
                     templateUrl: 'src/add/addForm.html',
                     controller: 'AddCtrl'
                 }).
+                when('/project/:id', {
+                    templateUrl: 'src/project/project.html',
+                    controller: 'ProjectCtrl'
+                }).
+
                 otherwise({
                     redirectTo: '/'
                 });
-        }])
+        }]);
 } ());

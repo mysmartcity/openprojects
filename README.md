@@ -28,6 +28,7 @@ Functionalitati:
  poza: photo
  seturi de date folosite: [link]
  author: "",
+ event: "",
  dataStart: date,
  votare: ""
  social:

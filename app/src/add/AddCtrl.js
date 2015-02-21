@@ -16,8 +16,8 @@
 (function(app) {
     'use strict';
 
-    var AddCtrl = function() {
-
+    var AddCtrl = function($scope) {
+        //$scope.status = ["Inceput", "Dezvoltare", "Beta", "Productie"];
     };
 
     app.controller("AddCtrl", AddCtrl);
