@@ -22,6 +22,22 @@ html, body {
     bottom: 30px;
 }
 
+.projectImage {
+    width: 300px;
+    max-height: 190px;
+}
+
+.gridTile {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    background-color: #ffffff;
+}
+
+.projectTitle {
+    background-color: #ffee58;
+    margin-top: -20px;
+    padding: 10px;
+}
+
 /*------------------user page---------------*/
 .project-cover {
     width: 100%;

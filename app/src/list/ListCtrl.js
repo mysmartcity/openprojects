@@ -17,7 +17,6 @@
     'use strict';
 
     var ListCtrl = function($scope, $location, ProjectsService) {
-        //debugger;
         ProjectsService.getList()
             .success(function(data) {
                 //

@@ -17,7 +17,7 @@
     'use strict';
 
     var AddCtrl = function($scope, $location, ProjectsService, $mdToast) {
-        $scope.project = {"name":"Date deschise","idea":{"lastName":"Isfan","firstName":"Petru"},"description":"Aplicatie pentru date deschise","eventName":"Open data hackathon","license":"Apache2","status":"Beta", submissionDate: "22/2/2015", image: "https://farm2.staticflickr.com/1050/938408499_5bc5817b63_o_d.jpg", repository: "https://github.com/mysmartcity/openprojects"};
+        //$scope.project = {"name":"Date deschise","idea":{"lastName":"Isfan","firstName":"Petru"},"description":"Aplicatie pentru date deschise","eventName":"Open data hackathon","license":"Apache2","status":"Beta", submissionDate: "22/2/2015", image: "https://farm2.staticflickr.com/1050/938408499_5bc5817b63_o_d.jpg", repository: "https://github.com/mysmartcity/openprojects"};
 
         //$scope.status = ["Inceput", "Dezvoltare", "Beta", "Productie"];
 

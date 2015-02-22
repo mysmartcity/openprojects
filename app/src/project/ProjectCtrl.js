@@ -15,7 +15,7 @@
 (function(app) {
     'use strict';
 
-    var ProjectCtrl = function($scope, $routeParams, ProjectsService) {
+    var ProjectCtrl = function($scope, $routeParams, ProjectsService, $mdDialog, $location) {
         var idProject = $routeParams.id;
         //debugger;
         ProjectsService.get(idProject)
@@ -31,6 +31,21 @@
                     $scope.project = data;
                 }
             });
+
+        $scope.showConfirm = function(ev) {
+            var confirm = $mdDialog.confirm()
+                .title('Esti sigur ca vrei sa stergi proiectul?')
+                .content('Proiectele șterse nu mai pot fi recuperate')
+                .ariaLabel('Lucky day')
+                .ok('Șterge')
+                .cancel('Anulare')
+                .targetEvent(ev);
+            $mdDialog.show(confirm).then(function() {
+                $location.path("#/");
+            }, function() {
+                //$scope.alert = 'You decided to keep your debt.';
+            });
+        };
     };
 
     app.controller("ProjectCtrl", ProjectCtrl);

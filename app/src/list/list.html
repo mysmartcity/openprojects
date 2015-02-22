@@ -7,16 +7,17 @@
             md-gutter-gt-sm="20px"
             style="text-align: left;">
 
-        <md-grid-tile ng-repeat="(key, project) in projects" md-rowspan="2"
-                      style="box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26); background-color: #ffffff;">
+        <md-grid-tile ng-repeat="(key, project) in projects" md-rowspan="2" class="gridTile">
 
-            <div>
+            <div style="padding: 10px;">
                 <a href="#/project/{{ key }}">
-                    <img ng-src="{{ project.image }}" alt="" style="width: 300px;">
+                    <img ng-src="{{ project.image }}"
+                         alt="{{ project.name }}"
+                         class="projectImage">
                 </a>
                 <h2>{{ project.name }}</h2>
-                <p>{{ project.description }}</p>
-                <p>Idee: {{ project.idea.firstName }} {{ project.idea.lastName }}</p>
+                <p>{{ project.description }}<br/>
+                <strong>Idee:</strong> {{ project.idea.firstName }} {{ project.idea.lastName }}</p>
             </div>
     </md-grid-list>
 
