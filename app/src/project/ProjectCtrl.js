@@ -17,7 +17,20 @@
 
     var ProjectCtrl = function($scope, $routeParams, ProjectsService) {
         var idProject = $routeParams.id;
-        $scope.project = ProjectsService.get(idProject);
+        //debugger;
+        ProjectsService.get(idProject)
+            .success(function(data) {
+                //
+                // Without this, angular does not update the view
+                //
+                if ($scope.$$phase !== "$digest" && $scope.$$phase !== "$apply") {
+                    $scope.$apply(function(){
+                        $scope.project = data;
+                    });
+                } else {
+                    $scope.project = data;
+                }
+            });
     };
 
     app.controller("ProjectCtrl", ProjectCtrl);

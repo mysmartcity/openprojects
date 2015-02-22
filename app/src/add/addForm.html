@@ -9,7 +9,7 @@
                 </md-input-container>
                 <md-input-container flex>
                     <label>Data Propunerii</label>
-                    <input ng-model="user.submissionDate">
+                    <input ng-model="project.submissionDate">
                 </md-input-container>
             </div>
             <div layout layout-sm="column">
@@ -25,7 +25,8 @@
             <md-input-container flex>
                 <label>Descriere</label>
                 <textarea ng-model="project.description" columns="1" md-maxlength="150"></textarea>
-            </md-input-container><div layout layout-sm="column">
+            </md-input-container>
+            <div layout layout-sm="column">
                 <md-input-container flex>
                     <label>Numele evenimentului</label>
                     <input ng-model="project.eventName">
@@ -37,6 +38,16 @@
                 <md-input-container flex>
                     <label>Status</label>
                     <input ng-model="project.status" placeholder="Propus / In dezvoltare / Beta / Productie">
+                </md-input-container>
+            </div>
+            <div layout layout-sm="column">
+                <md-input-container flex>
+                    <label>URL imagine</label>
+                    <input ng-model="project.image" placeholder="o imagine reprezentativa pentru site">
+                </md-input-container>
+                <md-input-container flex>
+                    <label>URL surse</label>
+                    <input ng-model="project.repository" placeholder="github / bitbucket / etc...">
                 </md-input-container>
             </div>
 

@@ -151,13 +151,30 @@
     }
     ];
 
-    var ProjectsService = function() {
+    var ProjectsService = function(FirebaseService) {
         return {
-            getList: function() {
-                return _projects;
+            //getList: function() {
+            //    return _projects;
+            //},
+            //get: function(id) {
+            //    return _projects[id];
+            //}
+            getList: function(callback) {
+                return {
+                    success: function(callback) {
+                        FirebaseService.getList(callback);
+                    }
+                };
             },
             get: function(id) {
-                return _projects[id];
+                return {
+                    success: function(callback) {
+                        FirebaseService.get(id, callback);
+                    }
+                };
+            },
+            add: function(project) {
+                FirebaseService.add(project);
             }
         }
     };

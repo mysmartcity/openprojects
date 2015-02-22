@@ -7,11 +7,11 @@
             md-gutter-gt-sm="20px"
             style="text-align: left;">
 
-        <md-grid-tile ng-repeat="project in projects" md-rowspan="2"
+        <md-grid-tile ng-repeat="(key, project) in projects" md-rowspan="2"
                       style="box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26); background-color: #ffffff;">
 
             <div>
-                <a href="#/project/{{ project.id }}">
+                <a href="#/project/{{ key }}">
                     <img ng-src="{{ project.image }}" alt="" style="width: 300px;">
                 </a>
                 <h2>{{ project.name }}</h2>
@@ -20,7 +20,7 @@
             </div>
     </md-grid-list>
 
-    <md-button class="md-fab" class="addbutton" style="position: fixed; right: 30px; bottom: 30px;" ng-click="add()">
+    <md-button class="md-fab addProject" ng-click="add()" aria-label="">
         <span class="fa fa-plus"></span>
     </md-button>
 </div>

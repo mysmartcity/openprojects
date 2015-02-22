@@ -17,7 +17,20 @@
     'use strict';
 
     var ListCtrl = function($scope, $location, ProjectsService) {
-        $scope.projects = ProjectsService.getList();
+        //debugger;
+        ProjectsService.getList()
+            .success(function(data) {
+                //
+                // Without this, angular does not update the view
+                //
+                if ($scope.$$phase !== "$digest" && $scope.$$phase !== "$apply") {
+                    $scope.$apply(function(){
+                        $scope.projects = data;
+                    });
+                } else {
+                    $scope.projects = data;
+                }
+            });
 
         $scope.add = function() {
             $location.path("/add");
