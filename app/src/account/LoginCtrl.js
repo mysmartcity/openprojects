@@ -17,8 +17,18 @@
  (function(app) {
      'use strict';
 
-     var LoginCtrl = function() {
+     var LoginCtrl = function($scope, $location) {
+         $scope.login = function() {
 
+         };
+
+         $scope.cancel = function() {
+             goHome();
+         };
+
+         var goHome = function() {
+             $location.path("#/");
+         };
      };
 
      app.controller("LoginCtrl", LoginCtrl);

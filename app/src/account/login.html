@@ -1,1 +1,20 @@
-<h2>login page</h2>
+<div layout="column" class="container">
+    <md-content class="md-padding" style="font-size:0.8em; text-align: left">
+        <form name="userForm">
+            <div layout layout-sm="column">
+                <md-input-container flex>
+                    <label>Nume Utilizator</label>
+                    <input ng-model="user.name">
+                </md-input-container>
+                <md-input-container flex>
+                    <label>Parola</label>
+                    <input ng-model="user.password">
+                </md-input-container>
+            </div>
+        </form>
+        <section layout="row" layout-sm="column" layout-align="center center">
+            <md-button class="md-raised addButton" ng-click="cancel()">Anulare</md-button>
+            <md-button class="md-raised md-primary" ng-click="login()">Login</md-button>
+        </section>
+    </md-content>
+</div>

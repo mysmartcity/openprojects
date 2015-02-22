@@ -10,7 +10,7 @@
                 <p><a ng-href="{{ project.repository }}">{{ project.repository }}</a></p>
                 <p><a href="{{ project.demo }}">Demo URL</a></p>
                 <p>Licența: {{ project.license }}</p>
-                <p>Autor: {{ project.author }}</p>
+                <p>Autor: {{ project.idea.firstName }} {{ project.idea.lastName }}</p>
                 <p>Status: {{ project.status }}</p>
                 <h3>Echipa:</h3>
                 <div class="md-whiteframe-z2 userCard" ng-repeat="member in project.team">

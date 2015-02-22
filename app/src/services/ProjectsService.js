@@ -24,7 +24,7 @@
         license: "Apache2",
         demo: "http://demoapp.com",
         status: "Inceput",
-        author: {
+        idea: {
             firstName: "Dan",
             lastName: "Popescu"
         },
@@ -57,7 +57,7 @@
         license: "Apache2",
         demo: "http://demoapp.com",
         status: "Inceput",
-        author: {
+        idea: {
             firstName: "Dan",
             lastName: "Popescu"
         },
@@ -90,7 +90,7 @@
         license: "Apache2",
         demo: "http://demoapp.com",
         status: "Inceput",
-        author: {
+        idea: {
             firstName: "Dan",
             lastName: "Popescu"
         },
@@ -123,7 +123,7 @@
         license: "Apache2",
         demo: "http://demoapp.com",
         status: "Inceput",
-        author: {
+        idea: {
             firstName: "Dan",
             lastName: "Popescu"
         },
