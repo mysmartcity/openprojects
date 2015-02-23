@@ -175,6 +175,9 @@
             },
             add: function(project) {
                 FirebaseService.add(project);
+            },
+            remove: function(id) {
+                FirebaseService.remove(id)
             }
         }
     };

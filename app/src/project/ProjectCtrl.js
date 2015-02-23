@@ -41,6 +41,7 @@
                 .cancel('Anulare')
                 .targetEvent(ev);
             $mdDialog.show(confirm).then(function() {
+                ProjectsService.remove(idProject);
                 $location.path("#/");
             }, function() {
                 //$scope.alert = 'You decided to keep your debt.';

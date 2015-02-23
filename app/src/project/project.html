@@ -8,8 +8,8 @@
                 <h2 class="projectTitle">{{ project.name }}</h2>
                 <div style=" text-align: left; padding: 10px;">
                     <p>{{ project.description }}</p>
-                    <p><a ng-href="{{ project.repository }}">{{ project.repository }}</a></p>
-                    <p><strong>Codul sursa: </strong><a href="{{ project.demo }}">Demo URL</a></p>
+                    <p><strong>Codul sursa: </strong><a ng-href="{{ project.repository }}">{{ project.repository }}</a></p>
+                    <p><strong>Demo URL: </strong><a href="{{ project.demo }}">Demo URL</a></p>
                     <section layout="row" style="margin-top: 15px; margin-bottom: 10px;">
                         <div flex><strong>Licența:</strong> {{ project.license }}</div>
                         <div flex><strong>Autor:</strong> {{ project.idea.firstName }} {{ project.idea.lastName }}</div>

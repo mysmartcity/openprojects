@@ -51,6 +51,10 @@
                 if (projectList) {
                     updateCallbackGet(projectList[updateCallbackId]);
                 }
+            },
+            remove: function(id) {
+                var node = new Firebase('https://openprojects.firebaseio.com/projects/' + id);
+                node.remove();
             }
         }
     };
